@@ -1,0 +1,6 @@
+Step 1> Start the GFSh command prompt and execute the commands provided in gemfire-server.txt
+        Get the the locator address and port and configure in gemfire-config.properties in both loader and reader.     
+
+Step 2>  Run the gemfire-batch-loader (LoaderMain.java) to insert some records defined in gemfire-sample-data.txt 
+          
+Step 3>  In GFSH Query for the region to validate the insertion.           

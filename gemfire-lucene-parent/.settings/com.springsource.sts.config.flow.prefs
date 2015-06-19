@@ -1,0 +1,2 @@
+//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/gemfire-solr-parent/gemfire-batch-reader/src/main/resources/META-INF/spring/batch-gemfire-reader-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<graph>\r\n<element clazz\="JobModelElement" type\="job">\r\n<structure end\="819" endstart\="807" start\="665" startend\="699"/>\r\n<bounds height\="118" width\="162" x\="15" y\="17"/>\r\n</element>\r\n</graph>
+eclipse.preferences.version=1

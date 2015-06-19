@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.emc.gemfiresolr</groupId>
+	<artifactId>gemfire-solr-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+	</properties>
+
+	<modules>
+		<module>gemfire-solr-common</module>
+		<module>gemfire-batch-data-loader</module>
+		<module>gemfire-index-writer</module>
+		<module>gemfire-solr-search-web</module>
+		<module>solr-services</module>
+	</modules>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+			<version>4.7.0</version>
+		</dependency>
+		
+	</dependencies>
+
+
+
+	<repositories>
+		<repository>
+			<id>repo.springsource.org.milestone</id>
+			<name>Spring Framework Milestone Repository</name>
+			<url>https://repo.springsource.org/milestone</url>
+		</repository>
+		<repository>
+			<id>repo.springsource.org.release</id>
+			<name>Spring Framework Release Repository</name>
+			<url>https://repo.springsource.org/release</url>
+		</repository>
+		<repository>
+			<id>repo.springsource.org.plugins.release</id>
+			<name>Spring Framework Dependencies Repository</name>
+			<url>http://repo.springsource.org/plugins-release</url>
+		</repository>
+	</repositories>
+
+</project>

@@ -1,0 +1,18 @@
+
+
+
+Please execute this commands to create gemfire locator, server and region.
+-----------------------------------------------------------------------------
+start locator --name=locator1 --port=41111
+
+
+start server --name=server1 --locators=localhost[41111] --server-port=40404
+
+
+create region --name=Customer --type=REPLICATE
+
+
+describe member --name=locator1
+
+
+describe region --name=/Customer
